@@ -13,8 +13,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
     
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -31,7 +29,7 @@ jobs:
       run: |
         pyinstaller --onefile --console --name "instagram_followback" instagram_followback.py
     
-    - name: Upload executable as artifact
+    - name: Upload Windows executable
       uses: actions/upload-artifact@v4
       with:
         name: instagram-followback-windows
@@ -44,7 +42,7 @@ jobs:
         files: dist/instagram_followback.exe
         draft: false
         prerelease: false
-        generate_release_notes: true
+        body_path: RELEASE_NOTES.md
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -54,8 +52,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
     
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -72,7 +68,7 @@ jobs:
       run: |
         pyinstaller --onefile --console --name "instagram_followback" instagram_followback.py
     
-    - name: Upload executable as artifact
+    - name: Upload Linux binary
       uses: actions/upload-artifact@v4
       with:
         name: instagram-followback-linux
@@ -84,8 +80,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
     
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -102,7 +96,7 @@ jobs:
       run: |
         pyinstaller --onefile --console --name "instagram_followback" instagram_followback.py
     
-    - name: Upload executable as artifact
+    - name: Upload macOS binary
       uses: actions/upload-artifact@v4
       with:
         name: instagram-followback-macos
