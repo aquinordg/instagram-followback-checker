@@ -3,8 +3,8 @@ name: Build and Release Executable
 on:
   push:
     tags:
-      - 'v*'  # Executa quando uma tag v1.0, v1.1, etc for criada
-  workflow_dispatch:  # Permite executar manualmente
+      - 'v*'
+  workflow_dispatch:
 
 jobs:
   build-windows:
@@ -13,6 +13,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
     
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -42,7 +44,7 @@ jobs:
         files: dist/instagram_followback.exe
         draft: false
         prerelease: false
-        body_path: RELEASE_NOTES.md
+        generate_release_notes: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -52,6 +54,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
     
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -80,6 +84,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
     
     - name: Set up Python
       uses: actions/setup-python@v5
