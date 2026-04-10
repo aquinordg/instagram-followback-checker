@@ -1,68 +1,64 @@
 # 📸 Instagram Followback Checker
 
-## 🎯 Sobre
-Ferramenta para identificar quem você segue no Instagram mas não segue de volta.
+## 🎯 About
+Tool to identify who you follow on Instagram but doesn't follow you back.
 
-## ✨ Funcionalidades
-- ✅ Detecta contas que você segue mas não te seguem de volta
-- ✅ Suporte a autenticação de dois fatores (2FA)
-- ✅ Gera relatório HTML com links clicáveis
-- ✅ Separa contas verificadas das não verificadas
-- ✅ Interface simples no terminal
-- ✅ Nenhuma senha é salva (seguro)
+## ✨ Features
+- ✅ Detects accounts you follow that don't follow you back
+- ✅ Two-Factor Authentication (2FA) support
+- ✅ Generates HTML report with clickable links
+- ✅ Separates verified from non-verified accounts
+- ✅ Simple terminal interface
+- ✅ No passwords are saved (secure)
 
-## 🚀 Como usar
-1. Baixe o arquivo `instagram_followback.exe`
-2. Dê duplo clique para executar
-3. Digite seu usuário e senha do Instagram
-4. Se tiver 2FA, digite o código quando solicitado
-5. Aguarde a análise (pode levar alguns minutos)
-6. O relatório HTML abrirá automaticamente no navegador
+## 🚀 How to Use
+1. Download the `instagram_followback.exe` file
+2. Double-click to run it
+3. Enter your Instagram username and password
+4. If you have 2FA enabled, enter the code when prompted
+5. Wait for the analysis (may take a few minutes)
+6. The HTML report will open automatically in your browser
 
-## 🔒 Segurança
-- **Nenhuma credencial é salva** em arquivos
-- As senhas são inseridas via terminal (não ficam visíveis)
-- Todo processo é local no seu computador
-- **Suporte total ao 2FA** - não precisa desativar!
+## 🔒 Security
+- **No credentials are saved** to files
+- Passwords are entered via terminal (not visible on screen)
+- Entire process runs locally on your computer
+- **Full 2FA support** - no need to disable it!
 
-## 📊 Exemplo do relatório gerado
-O relatório HTML inclui:
-- Total de contas que não seguem de volta
-- Lista completa com links diretos para os perfis
-- Separação entre contas comuns e verificadas
-- Design moderno e responsivo
+## 📊 Sample Generated Report
+The HTML report includes:
+- Total number of accounts not following back
+- Complete list with direct links to profiles
+- Separation between regular and verified accounts
+- Modern and responsive design
 
-## ⚠️ Avisos importantes
-- **Limites do Instagram**: Evite executar muitas vezes seguidas
-- **Contas grandes**: Se você segue muitas pessoas (+2000), o processo pode levar alguns minutos
-- **Conexão estável**: Necessária para coletar os dados
+## ⚠️ Important Warnings
+- **Instagram Limits**: Avoid running too frequently
+- **Large Accounts**: If you follow many people (+2000), the process may take a few minutes
+- **Stable Connection**: Required to collect data
 
-## 🐛 Solução de problemas
+## 🐛 Troubleshooting
 
-### "O Windows protegeu seu PC" ao executar o .exe
-1. Clique em **"Mais informações"**
-2. Clique em **"Executar mesmo assim"**
-3. Isso é normal para programas novos, é seguro
+### "Windows protected your PC" when running the .exe
+1. Click **"More info"**
+2. Click **"Run anyway"**
+3. This is normal for new programs, it's safe
 
-### Erro de login
-- Verifique usuário/senha
-- Se tiver 2FA, aguarde o código ser solicitado
-- Considere criar uma [senha de aplicativo](https://help.instagram.com/113833587843245) no Instagram
+### Login Error
+- Check your username/password
+- If you have 2FA, wait for the code prompt
+- Consider creating an [app password](https://help.instagram.com/113833587843245) on Instagram
 
-### O script está demorando muito
-- Normal para contas com muitos seguidores (5-10 minutos)
-- O Instagram limita requisições, então há pausas automáticas
+### Script is taking too long
+- Normal for accounts with many followers (5-10 minutes)
+- Instagram limits requests, so there are automatic pauses
 
-## 📋 Requisitos
-- Windows 10 ou 11 (para o executável)
-- Ou Python 3.7+ (para executar o código fonte)
+## 📋 Requirements
+- Windows 10 or 11 (for the executable)
+- Or Python 3.7+ (to run the source code)
 
-## 🤝 Contribuindo
-Contribuições são bem-vindas! Acesse o repositório no GitHub.
+## 🤝 Contributing
+Contributions are welcome! Visit the repository on GitHub.
 
-## 📄 Licença
-MIT License - Veja o arquivo LICENSE no repositório
-
----
-
-**⭐ Se este projeto te ajudou, considere dar uma estrela no GitHub!**
+## 📄 License
+MIT License - See the LICENSE file in the repository

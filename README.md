@@ -1,6 +1,6 @@
 # 📸 Instagram Followback Checker
 
-Um script Python para identificar quem você segue no Instagram mas não segue de volta.
+A Python script to identify who you follow on Instagram but doesn't follow you back.
 
 [![Python Version](https://img.shields.io/badge/python-3.7+-blue.svg)](https://python.org)
 [![Windows](https://img.shields.io/badge/Windows-0078D6?logo=windows&logoColor=white)](https://github.com)
@@ -8,129 +8,135 @@ Um script Python para identificar quem você segue no Instagram mas não segue d
 [![macOS](https://img.shields.io/badge/macOS-000000?logo=apple&logoColor=white)](https://github.com)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-## ✨ Funcionalidades
+[![Download Latest Release](https://img.shields.io/badge/📦_Download_Latest_Release-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aquinordg/instagram-followback-checker/releases/latest/download/instagram_followback.exe)
 
-- ✅ Detecta contas que você segue mas não te seguem de volta
-- ✅ Suporte a autenticação de dois fatores (2FA)
-- ✅ Gera relatório HTML com links clicáveis
-- ✅ Separa contas verificadas das não verificadas
-- ✅ Interface simples no terminal
-- ✅ Nenhuma senha é salva (seguro)
+## ✨ Features
 
-## 🚀 Como usar - Escolha sua opção
+- ✅ Detects accounts you follow that don't follow you back
+- ✅ Two-Factor Authentication (2FA) support
+- ✅ Generates HTML report with clickable links
+- ✅ Separates verified from non-verified accounts
+- ✅ Simple terminal interface
+- ✅ No passwords are saved (secure)
 
-### Opção 1: Para usuários comuns (SEM necessidade de Python) 🎯
+## 🚀 How to Use - Choose Your Option
 
-**Windows apenas** - Baixe o executável pronto:
+### Option 1: For regular users (NO Python required) 🎯
 
-1. Acesse a [página de Releases](https://github.com/aquinordg/instagram-followback-checker/releases)
-2. Baixe o arquivo `instagram_followback.exe`
-3. Dê **duplo clique** no arquivo baixado
-4. Siga as instruções no terminal
+**Windows only** - Download the ready-to-run executable:
 
-> ⚠️ **Nota**: O Windows pode mostrar um aviso de segurança. Clique em "Executar mesmo assim" - é seguro!
+1. Go to the [Releases page](https://github.com/aquinordg/instagram-followback-checker/releases)
+2. Download the `instagram_followback.exe` file
+3. **Double-click** the downloaded file
+4. Follow the instructions in the terminal
 
-### Opção 2: Para usuários que preferem o código fonte 🐍
+> ⚠️ **Note**: Windows may show a security warning. Click "Run anyway" - it's safe!
 
-**Requer Python 3.7+ instalado**
+**Quick download button:**
 
-#### Instalação rápida:
+[![Download instagram_followback.exe](https://img.shields.io/badge/⬇️_Download_.exe_(Windows)-2ea44f?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/aquinordg/instagram-followback-checker/releases/latest/download/instagram_followback.exe)
+
+### Option 2: For users who prefer the source code 🐍
+
+**Requires Python 3.7+ installed**
+
+#### Quick installation:
 
 ```bash
-# Clone o repositório
+# Clone the repository
 git clone https://github.com/aquinordg/instagram-followback-checker.git
 cd instagram-followback-checker
 
-# Instale a dependência
+# Install the dependency
 pip install -r requirements.txt
 
-# Execute
+# Run
 python instagram_followback.py
 ```
 
-### Ou usando os scripts automáticos:
+### Using automated scripts:
 
-- **Windows**: Dê duplo clique em `run.bat`
-- **Mac/Linux**: Execute `./run.sh` (use `chmod +x run.sh` primeiro)
+- **Windows**: Double-click `run.bat`
+- **Mac/Linux**: Run `./run.sh` (use `chmod +x run.sh` first)
 
-## 📊 Como funciona
+## 📊 How It Works
 
-1. O script pede seu **usuário** e **senha** do Instagram
-2. Se tiver 2FA ativado, pedirá o código de verificação
-3. O script analisa sua lista de "seguindo" e "seguidores"
-4. Gera um relatório HTML com quem não te segue de volta
-5. O relatório abre automaticamente no seu navegador
+1. The script asks for your Instagram **username** and **password**
+2. If 2FA is enabled, it will ask for the verification code
+3. The script analyzes your "following" and "followers" lists
+4. Generates an HTML report of who doesn't follow you back
+5. The report opens automatically in your browser
 
-## 🔒 Segurança
+## 🔒 Security
 
-- **Nenhuma credencial é salva** em arquivos
-- As senhas são inseridas via `getpass` (não ficam visíveis)
-- Todo processo é local no seu computador
-- **Suporte total ao 2FA** - não precisa desativar!
+- **No credentials are saved** to files
+- Passwords are entered via `getpass` (not visible on screen)
+- Entire process runs locally on your computer
+- **Full 2FA support** - no need to disable it!
 
-## 📸 Exemplo do relatório gerado
+## 📸 Sample Generated Report
 
-O relatório HTML inclui:
+The HTML report includes:
 
-- Total de contas que não seguem de volta
-- Lista completa com links diretos para os perfis
-- Separação entre contas comuns e verificadas
-- Design moderno e responsivo
-- Links clicáveis que abrem em nova aba
+- Total number of accounts not following back
+- Complete list with direct links to profiles
+- Separation between regular and verified accounts
+- Modern and responsive design
+- Clickable links that open in new tabs
 
-## 📦 Para desenvolvedores: Gerando seu próprio .EXE
+## 📦 For Developers: Generating Your Own .EXE
 
-Se quiser gerar o executável você mesmo:
+If you want to generate the executable yourself:
 
 ```bash
-# Instale o PyInstaller
+# Install PyInstaller
 pip install pyinstaller
 
-# Execute o script de build
+# Run the build script
 python build_exe.py
 
-# Ou use o PyInstaller diretamente
+# Or use PyInstaller directly
 pyinstaller --onefile --console --name "instagram_followback" instagram_followback.py
 ```
-O executável será gerado na pasta `dist/`
+The executable will be generated in the `dist/` folder
 
-## 🖥️ Compatibilidade
+## 🖥️ Compatibility
 
-| Sistema Operacional | Código Fonte (.py) | Executável (.exe) |
+| Operating System | Source Code (.py) | Executable (.exe) |
 |-------------------|-------------------|-------------------|
-| Windows 10/11     | ✅ Sim            | ✅ Sim (baixe o .exe) |
-| macOS             | ✅ Sim            | ❌ Não (use código fonte) |
-| Linux             | ✅ Sim            | ❌ Não (use código fonte) |
+| Windows 10/11     | ✅ Yes            | ✅ Yes (download .exe) |
+| macOS             | ✅ Yes            | ❌ No (use source code) |
+| Linux             | ✅ Yes            | ❌ No (use source code) |
 
-## ⚠️ Avisos importantes
+## ⚠️ Important Warnings
 
-- **Limites do Instagram**: Evite executar muitas vezes seguidas
-- **Contas grandes**: Se você segue muitas pessoas (+2000), o processo pode levar alguns minutos
-- **Conexão estável**: Necessária para coletar os dados
+- **Instagram Limits**: Avoid running too frequently
+- **Large Accounts**: If you follow many people (+2000), the process may take a few minutes
+- **Stable Connection**: Required to collect data
 
-## 🐛 Problemas comuns e soluções
+## 🐛 Common Issues and Solutions
 
-### "O Windows protegeu seu PC" ao executar o .exe
+### "Windows protected your PC" when running the .exe
 
-1. Clique em **"Mais informações"**
-2. Clique em **"Executar mesmo assim"**
-3. Isso ocorre porque o executável é novo, mas é seguro
+1. Click **"More info"**
+2. Click **"Run anyway"**
+3. This happens because the executable is new, but it's safe
 
-### Erro de login
+### Login Error
 
-- Verifique usuário/senha
-- Se tiver 2FA, aguarde o código ser solicitado
+- Check your username/password
+- If you have 2FA, wait for the code prompt
 
-### O script está demorando muito
+### Script is taking too long
 
-- Normal para contas com muitos seguidores (5-10 minutos)
-- O Instagram limita requisições, então há pausas automáticas
+- Normal for accounts with many followers (5-10 minutes)
+- Instagram limits requests, so there are automatic pauses
 
-## 📄 Licença
+## 📄 License
 
-Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
+Distributed under the MIT license. See `LICENSE` for more information.
 
-## ⭐ Agradecimentos
+## ⭐ Acknowledgments
 
-- [Instaloader](https://instaloader.github.io/) - Biblioteca incrível para interagir com o Instagram
-- [PyInstaller](https://pyinstaller.org/) - Para gerar o executável
+- [Instaloader](https://instaloader.github.io/) - Amazing library to interact with Instagram
+- [PyInstaller](https://pyinstaller.org/) - To generate the executable
