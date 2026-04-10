@@ -23,7 +23,7 @@ Um script Python para identificar quem você segue no Instagram mas não segue d
 
 **Windows apenas** - Baixe o executável pronto:
 
-1. Acesse a [página de Releases](https://github.com/SEU_USUARIO/instagram-followback-checker/releases)
+1. Acesse a [página de Releases](https://github.com/aquinordg/instagram-followback-checker/releases)
 2. Baixe o arquivo `instagram_followback.exe`
 3. Dê **duplo clique** no arquivo baixado
 4. Siga as instruções no terminal
@@ -38,7 +38,7 @@ Um script Python para identificar quem você segue no Instagram mas não segue d
 
 ```bash
 # Clone o repositório
-git clone https://github.com/SEU_USUARIO/instagram-followback-checker.git
+git clone https://github.com/aquinordg/instagram-followback-checker.git
 cd instagram-followback-checker
 
 # Instale a dependência
@@ -120,7 +120,6 @@ O executável será gerado na pasta `dist/`
 
 - Verifique usuário/senha
 - Se tiver 2FA, aguarde o código ser solicitado
-- Considere criar uma [senha de aplicativo](https://help.instagram.com/113833587843245) no Instagram
 
 ### O script está demorando muito
 
