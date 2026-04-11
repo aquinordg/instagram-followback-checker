@@ -8,8 +8,6 @@ A Python script to identify who you follow on Instagram but doesn't follow you b
 [![macOS](https://img.shields.io/badge/macOS-000000?logo=apple&logoColor=white)](https://github.com)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-[![Download Latest Release](https://img.shields.io/badge/📦_Download_Latest_Release-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aquinordg/instagram-followback-checker/releases/latest/download/instagram_followback.exe)
-
 ## ✨ Features
 
 - ✅ Detects accounts you follow that don't follow you back
@@ -34,7 +32,7 @@ A Python script to identify who you follow on Instagram but doesn't follow you b
 
 **Quick download button:**
 
-[![Download instagram_followback.exe](https://img.shields.io/badge/⬇️_Download_.exe_(Windows)-2ea44f?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/aquinordg/instagram-followback-checker/releases/latest/download/instagram_followback.exe)
+[![Download Latest Release](https://img.shields.io/badge/⬇️_Download_Latest_Release-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aquinordg/instagram-followback-checker/releases/latest/download/instagram_followback.exe)
 
 ### Option 2: For users who prefer the source code 🐍
 
