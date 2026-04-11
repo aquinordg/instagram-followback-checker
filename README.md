@@ -36,7 +36,7 @@ A Python script to identify who you follow on Instagram but doesn't follow you b
 
 **Quick download button:**
 
-[![Download Latest Release](https://img.shields.io/badge/⬇️_Download_Latest_Release-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aquinordg/instagram-followback-checker/releases/latest/download/instagram_followback.exe)
+[![Download instagram_followback.exe](https://img.shields.io/badge/Download_.exe_(Windows)-2ea44f?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/aquinordg/instagram-followback-checker/releases/latest/download/instagram_followback.exe)
 
 ### Option 2: For users who prefer the source code 🐍
 
