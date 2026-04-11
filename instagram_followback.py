@@ -20,22 +20,22 @@ def clear_screen():
 def show_banner():
     """Show initial banner"""
     clear_screen()
-    print("🎯" + "="*60 + "🎯")
+    print("="*60)
     print(f"            INSTAGRAM FOLLOWBACK CHECKER v{VERSION}")
-    print("🎯" + "="*60 + "🎯")
+    print("="*60)
     print()
 
 def get_credentials():
     """Request user credentials"""
     show_banner()
-    print("🔐 PLEASE ENTER YOUR INSTAGRAM CREDENTIALS")
+    print(" PLEASE ENTER YOUR INSTAGRAM CREDENTIALS")
     print("="*50)
     
     username = input("Enter your username: ").strip()
     if username.startswith('@'):
         username = username[1:]
     
-    print("\n📝 Your password will not be saved and is used only for this session.")
+    print("\n Your password will not be saved and is used only for this session.")
     print("   Login is required to access your followers lists.")
     print("="*50)
     
@@ -142,31 +142,31 @@ def main():
             request_timeout=30
         )
         
-        print("\n⏳ Logging into Instagram...")
+        print("\n Logging into Instagram...")
         
         try:
             # Login com suporte a 2FA
             L.login(username, password)
-            print("✅ Login successful!")
+            print("Login successful!")
         except instaloader.exceptions.TwoFactorAuthRequiredException:
-            print("\n🔐 Two-Factor Authentication Required")
+            print("\n Two-Factor Authentication Required")
             two_factor_code = input("Enter the 2FA code from your authenticator app: ")
             L.two_factor_login(two_factor_code)
-            print("✅ 2FA verification successful!")
+            print(" 2FA verification successful!")
         except Exception as e:
-            print(f"❌ Login error: {e}")
-            print("\n💡 Tips:")
-            print("   • Check your username and password")
-            print("   • If you have 2FA, wait for the code prompt")
-            print("   • Try creating an app password on Instagram")
+            print(f" Login error: {e}")
+            print("\n Tips:")
+            print("   - Check your username and password")
+            print("   - If you have 2FA, wait for the code prompt")
+            print("   - Try creating an app password on Instagram")
             input("\nPress Enter to exit...")
             return
         
         try:
             profile = instaloader.Profile.from_username(L.context, username)
-            print("✅ Profile loaded successfully!")
+            print(" Profile loaded successfully!")
         except Exception as e:
-            print(f"❌ Error accessing profile: {e}")
+            print(f" Error accessing profile: {e}")
             input("\nPress Enter to exit...")
             return
         
@@ -174,8 +174,8 @@ def main():
         following = {}
         followers = set()
         
-        print("\n👥 Searching for people you follow...")
-        print("   ⏳ This may take a few minutes...")
+        print("\n Searching for people you follow...")
+        print("    This may take a few minutes...")
         try:
             for followee in profile.get_followees():
                 following[followee.username] = {
@@ -185,23 +185,23 @@ def main():
                 }
                 # Simple progress indicator
                 if len(following) % 100 == 0:
-                    print(f"   📊 Found {len(following)} profiles so far...")
-            print(f"✅ Found {len(following)} profiles you follow")
+                    print(f"    Found {len(following)} profiles so far...")
+            print(f" Found {len(following)} profiles you follow")
         except Exception as e:
-            print(f"❌ Error fetching following list: {e}")
+            print(f" Error fetching following list: {e}")
             input("\nPress Enter to exit...")
             return
         
-        print("\n👤 Searching for your followers...")
-        print("   ⏳ This may take a few minutes...")
+        print("\n Searching for your followers...")
+        print("    This may take a few minutes...")
         try:
             for follower in profile.get_followers():
                 followers.add(follower.username)
                 if len(followers) % 100 == 0:
-                    print(f"   📊 Found {len(followers)} followers so far...")
-            print(f"✅ Found {len(followers)} followers")
+                    print(f"    Found {len(followers)} followers so far...")
+            print(f" Found {len(followers)} followers")
         except Exception as e:
-            print(f"❌ Error fetching followers list: {e}")
+            print(f" Error fetching followers list: {e}")
             input("\nPress Enter to exit...")
             return
         
@@ -216,10 +216,10 @@ def main():
         non_verified_sorted = sorted(non_verified_users, key=lambda x: x[0].lower())
         verified_sorted = sorted(verified_users, key=lambda x: x[0].lower())
         
-        print(f"\n📊 Analysis completed!")
-        print(f"   • Total profiles you follow: {len(following)}")
-        print(f"   • Total followers: {len(followers)}")
-        print(f"   • Profiles that don't follow you back: {len(non_followers)}")
+        print(f"\n Analysis completed!")
+        print(f"   - Total profiles you follow: {len(following)}")
+        print(f"   - Total followers: {len(followers)}")
+        print(f"   - Profiles that don't follow you back: {len(non_followers)}")
         print(f"     - Regular accounts: {len(non_verified_sorted)}")
         print(f"     - Verified accounts: {len(verified_sorted)}")
         
@@ -234,21 +234,21 @@ def main():
         # Open report in browser
         try:
             webbrowser.open(f'file://{os.path.abspath(html_filename)}')
-            print(f"\n🌐 Report opened automatically in your browser!")
-            print(f"📁 File saved as: {html_filename}")
+            print(f"\n Report opened automatically in your browser!")
+            print(f" File saved as: {html_filename}")
         except Exception:
-            print(f"\n📄 Report saved as: {html_filename}")
-            print("💡 You can open it manually in any web browser")
+            print(f"\n Report saved as: {html_filename}")
+            print(" You can open it manually in any web browser")
         
-        print("\n✨ Analysis completed successfully!")
-        print("💡 Tip: In the HTML report, click on any username to open their profile")
+        print("\n Analysis completed successfully!")
+        print(" Tip: In the HTML report, click on any username to open their profile")
         
-        input("\n📌 Press Enter to exit...")
+        input("\n Press Enter to exit...")
         
     except KeyboardInterrupt:
-        print("\n\n⏹️ Operation cancelled by user.")
+        print("\n\n Operation cancelled by user.")
     except Exception as e:
-        print(f"\n❌ Unexpected error: {e}")
+        print(f"\n Unexpected error: {e}")
         input("\nPress Enter to exit...")
 
 if __name__ == "__main__":
