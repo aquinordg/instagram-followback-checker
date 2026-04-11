@@ -1,12 +1,14 @@
-# 📸 Instagram Followback Checker
-
-A Python script to identify who you follow on Instagram but doesn't follow you back.
-
 [![Python Version](https://img.shields.io/badge/python-3.7+-blue.svg)](https://python.org)
 [![Windows](https://img.shields.io/badge/Windows-0078D6?logo=windows&logoColor=white)](https://github.com)
 [![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)](https://github.com)
 [![macOS](https://img.shields.io/badge/macOS-000000?logo=apple&logoColor=white)](https://github.com)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
+# 📸 Instagram Followback Checker
+
+A Python script to identify who you follow on Instagram but doesn't follow you back.
+
+---
 
 ## ✨ Features
 
@@ -16,6 +18,8 @@ A Python script to identify who you follow on Instagram but doesn't follow you b
 - ✅ Separates verified from non-verified accounts
 - ✅ Simple terminal interface
 - ✅ No passwords are saved (secure)
+
+---
 
 ## 🚀 How to Use - Choose Your Option
 
@@ -57,6 +61,8 @@ python instagram_followback.py
 - **Windows**: Double-click `run.bat`
 - **Mac/Linux**: Run `./run.sh` (use `chmod +x run.sh` first)
 
+---
+
 ## 📊 How It Works
 
 1. The script asks for your Instagram **username** and **password**
@@ -65,12 +71,16 @@ python instagram_followback.py
 4. Generates an HTML report of who doesn't follow you back
 5. The report opens automatically in your browser
 
+---
+
 ## 🔒 Security
 
 - **No credentials are saved** to files
 - Passwords are entered via `getpass` (not visible on screen)
 - Entire process runs locally on your computer
 - **Full 2FA support** - no need to disable it!
+
+---
 
 ## 📸 Sample Generated Report
 
@@ -81,6 +91,8 @@ The HTML report includes:
 - Separation between regular and verified accounts
 - Modern and responsive design
 - Clickable links that open in new tabs
+
+---
 
 ## 📦 For Developers: Generating Your Own .EXE
 
@@ -98,6 +110,8 @@ pyinstaller --onefile --console --name "instagram_followback" instagram_followba
 ```
 The executable will be generated in the `dist/` folder
 
+---
+
 ## 🖥️ Compatibility
 
 | Operating System | Source Code (.py) | Executable (.exe) |
@@ -106,11 +120,15 @@ The executable will be generated in the `dist/` folder
 | macOS             | ✅ Yes            | ❌ No (use source code) |
 | Linux             | ✅ Yes            | ❌ No (use source code) |
 
+---
+
 ## ⚠️ Important Warnings
 
 - **Instagram Limits**: Avoid running too frequently
 - **Large Accounts**: If you follow many people (+2000), the process may take a few minutes
 - **Stable Connection**: Required to collect data
+
+---
 
 ## 🐛 Common Issues and Solutions
 
@@ -130,9 +148,39 @@ The executable will be generated in the `dist/` folder
 - Normal for accounts with many followers (5-10 minutes)
 - Instagram limits requests, so there are automatic pauses
 
+---
+
 ## 📄 License
 
 Distributed under the MIT license. See `LICENSE` for more information.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions to SLEDgeH! To contribute:
+1. Fork this repository.
+2. Create a new branch for your feature.
+3. Submit a pull request with your changes.
+
+For questions or information, feel free to reach out at: [aquinordga@gmail.com](mailto:aquinordga@gmail.com).
+
+---
+
+## 👨‍💻 Author
+
+Developed by AQUINO, R. D. G. 
+[![Lattes](https://github.com/aquinordg/custom_tools/blob/main/icons/icons8-plataforma-lattes-32.png)](http://lattes.cnpq.br/2373005809061037)
+[![ORCID](https://github.com/aquinordg/custom_tools/blob/main/icons/icons8-orcid-32.png)](https://orcid.org/0000-0002-8486-8354)
+[![Google Scholar](https://github.com/aquinordg/custom_tools/blob/main/icons/icons8-google-scholar-32.png)](https://scholar.google.com/citations?user=r5WsvKgAAAAJ&hl)
+
+---
+
+## 💬 Feedback
+
+Feel free to open an issue or contact me for feedback or feature requests. Your input is highly appreciated!
+
+---
 
 ## ⭐ Acknowledgments
 
