@@ -14,18 +14,18 @@ def check_pyinstaller():
     """Verifica se o PyInstaller está instalado"""
     try:
         import PyInstaller
-        print("✅ PyInstaller encontrado")
+        print(" PyInstaller encontrado")
         return True
     except ImportError:
-        print("❌ PyInstaller não está instalado")
-        print("\n📦 Instalando PyInstaller...")
+        print(" PyInstaller não está instalado")
+        print("\n Instalando PyInstaller...")
         subprocess.check_call([sys.executable, "-m", "pip", "install", "pyinstaller"])
-        print("✅ PyInstaller instalado com sucesso!")
+        print(" PyInstaller instalado com sucesso!")
         return True
 
 def clean_old_build():
     """Limpa builds anteriores"""
-    print("\n🧹 Limpando builds anteriores...")
+    print("\n Limpando builds anteriores...")
     
     folders_to_remove = ['build', 'dist', '__pycache__']
     for folder in folders_to_remove:
@@ -40,7 +40,7 @@ def clean_old_build():
 
 def build_executable():
     """Gera o executável"""
-    print("\n🔨 Gerando executável...")
+    print("\n Gerando executável...")
     print("   Isso pode levar alguns minutos...")
     
     # Comando do PyInstaller
@@ -56,10 +56,10 @@ def build_executable():
     
     try:
         subprocess.run(cmd, check=True, capture_output=False)
-        print("\n✅ Executável gerado com sucesso!")
+        print("\n Executável gerado com sucesso!")
         return True
     except subprocess.CalledProcessError as e:
-        print(f"\n❌ Erro ao gerar executável: {e}")
+        print(f"\n Erro ao gerar executável: {e}")
         return False
 
 def show_result():
@@ -69,16 +69,16 @@ def show_result():
     if os.path.exists(exe_path):
         size = os.path.getsize(exe_path) / (1024 * 1024)  # Tamanho em MB
         print("\n" + "="*50)
-        print("✅ BUILD CONCLUÍDO COM SUCESSO!")
+        print(" BUILD CONCLUÍDO COM SUCESSO!")
         print("="*50)
-        print(f"\n📁 Executável gerado em: {exe_path}")
-        print(f"📦 Tamanho: {size:.2f} MB")
-        print("\n💡 Para distribuir:")
+        print(f"\n Executável gerado em: {exe_path}")
+        print(f" Tamanho: {size:.2f} MB")
+        print("\n Para distribuir:")
         print("   1. Copie o arquivo .exe para onde quiser")
         print("   2. O usuário só precisa dar duplo clique!")
-        print("\n📝 Lembrete: Adicione este .exe nas releases do GitHub")
+        print("\n Lembrete: Adicione este .exe nas releases do GitHub")
     else:
-        print("\n❌ Erro: Executável não foi encontrado!")
+        print("\n Erro: Executável não foi encontrado!")
 
 def main():
     """Função principal"""
@@ -88,7 +88,7 @@ def main():
     
     # Verificar PyInstaller
     if not check_pyinstaller():
-        print("❌ Não foi possível continuar sem o PyInstaller")
+        print(" Não foi possível continuar sem o PyInstaller")
         sys.exit(1)
     
     # Limpar builds antigos
@@ -98,7 +98,7 @@ def main():
     if build_executable():
         show_result()
     else:
-        print("\n❌ Falha na geração do executável")
+        print("\n Falha na geração do executável")
         sys.exit(1)
 
 if __name__ == "__main__":

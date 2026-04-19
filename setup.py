@@ -6,12 +6,12 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
     name="instagram-followback-checker",
     version="1.0.0",
-    author="Seu Nome",
-    author_email="seu@email.com",
+    author="R. Douglas G. Aquino",
+    author_email="aquinordga@gmail.com",
     description="Check who doesn't follow you back on Instagram",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/SEU_USUARIO/instagram-followback-checker",
+    url="https://github.com/aquinordg/instagram-followback-checker",
     py_modules=["instagram_followback"],
     classifiers=[
         "Programming Language :: Python :: 3",
