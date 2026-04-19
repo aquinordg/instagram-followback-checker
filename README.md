@@ -175,8 +175,6 @@ Developed by AQUINO, R. D. G.
 [![Google Scholar](https://github.com/aquinordg/custom_tools/blob/main/icons/icons8-google-scholar-32.png)](https://scholar.google.com/citations?user=r5WsvKgAAAAJ&hl)
 [![Instagram](https://github.com/aquinordg/custom_tools/blob/main/icons/icons8-instagram-32.png)](https://www.instagram.com/aquinordg/)
 
-https://github.com/aquinordg/custom_tools/blob/main/icons/icons8-instagram-48.png
-
 ---
 
 ## 💬 Feedback
