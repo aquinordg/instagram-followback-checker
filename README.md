@@ -13,11 +13,12 @@ A Python script to identify who you follow on Instagram but doesn't follow you b
 ## ✨ Features
 
 - ✅ Detects accounts you follow that don't follow you back
-- ✅ Two-Factor Authentication (2FA) support
+- ✅ Two-Factor Authentication (2FA) support — authenticator app, SMS, and email
+- ✅ Session reuse — no password needed after the first login
 - ✅ Generates HTML report with clickable links
 - ✅ Separates verified from non-verified accounts
 - ✅ Simple terminal interface
-- ✅ No passwords are saved (secure)
+- ✅ Passwords are never saved to disk
 
 ---
 
@@ -65,20 +66,22 @@ python instagram_followback.py
 
 ## 📊 How It Works
 
-1. The script asks for your Instagram **username** and **password**
-2. If 2FA is enabled, it will ask for the verification code
-3. The script analyzes your "following" and "followers" lists
-4. Generates an HTML report of who doesn't follow you back
-5. The report opens automatically in your browser
+1. The script asks for your Instagram **username**
+2. If a saved session exists, it logs in automatically — no password needed
+3. Otherwise, it asks for your **password** (and 2FA code if enabled)
+4. After a successful login the session is saved for future runs
+5. The script analyzes your "following" and "followers" lists
+6. Generates an HTML report of who doesn't follow you back
+7. The report opens automatically in your browser
 
 ---
 
 ## 🔒 Security
 
-- **No credentials are saved** to files
+- **Passwords are never saved** — only an encrypted session token is stored locally (same as a browser cookie)
 - Passwords are entered via `getpass` (not visible on screen)
 - Entire process runs locally on your computer
-- **Full 2FA support** - no need to disable it!
+- **Full 2FA support** — authenticator app, SMS, and email codes are all accepted
 
 ---
 
@@ -138,10 +141,21 @@ The executable will be generated in the `dist/` folder
 2. Click **"Run anyway"**
 3. This happens because the executable is new, but it's safe
 
-### Login Error
+### Login Error — "unexpected null login result"
 
-- Check your username/password
-- If you have 2FA, wait for the code prompt
+This means Instagram blocked the login attempt, usually because the account has a pending verification. To fix it:
+
+1. Open [instagram.com](https://www.instagram.com) in your browser and log in normally
+2. Complete any verification Instagram shows (email/phone confirmation, birthday, terms of service, etc.)
+3. Run the script again
+
+If the problem persists, try from a different network or wait a few hours.
+
+### Login Error — wrong password or 2FA code
+
+- Check your username and password
+- If the 2FA code is wrong, the script allows up to 3 attempts before exiting
+- Make sure you are using the code for the correct account
 
 ### Script is taking too long
 
@@ -158,7 +172,7 @@ Distributed under the MIT license. See `LICENSE` for more information.
 
 ## 🤝 Contributing
 
-We welcome contributions to SLEDgeH! To contribute:
+We welcome contributions! To contribute:
 1. Fork this repository.
 2. Create a new branch for your feature.
 3. Submit a pull request with your changes.
